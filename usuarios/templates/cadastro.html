@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Criar Conta{% endblock %}
+<body>
+    {% block content %}
+
+    <section class="signup">
+        <div class="signup-box">
+            <div class="signup-header">
+                <span class="name-signup title-normal">Criar Conta</span>
+                <div class="mini-logo2"><img src="{% static 'img/logo.png' %}"></div>
+                <div class="divider-gr"></div>
+            </div>
+
+            <form id="form-signup" class="signup-input" action="{% url 'cadastro' %}" method="POST">
+                {% csrf_token %}
+                <div class="signup-item1">
+                    <label class="title-normal">E-mail:</label><br>
+                    <input class="input_text-mc" type="text" name="email"><br>
+                </div>
+
+                <div class="signup-item2">
+                    <label class="title-normal">Senha:</label><br>
+                    <input class="input_text-mc" type="password" name="password"><br>
+                </div>
+
+                <div class="signup-item2">
+                    <label class="title-normal">Confirmação de Senha:</label><br>
+                    <input class="input_text-mc" type="password" name="confirm-password"><br>
+                </div>
+
+                <div class="signup-item3">
+                    <label class="title-normal">Primeiro Nome:</label><br>
+                    <input class="input_text-mc" type="text" name="name"><br>
+                </div>
+
+                <div class="signup-item3">
+                    <label class="title-normal">Sobrenome:</label><br>
+                    <input class="input_text-mc" type="text" name="surname"><br>
+                </div>
+
+                <div class="signup-item4">
+                    <label class="title-normal">País:</label><br>
+                    <input class="input_text-mc" type="text" name="country"><br>
+                </div>
+
+                <div class="signup-item4">
+                    <label class="title-normal">Estado:</label><br>
+                    <input class="input_text-mc" type="text" name="state"><br>
+                </div>
+
+                <div class="signup-item4">
+                    <label class="title-normal">Cidade:</label><br>
+                    <input class="input_text-mc" type="text" name="city"><br>
+                </div>
+            </form>
+            <button form="form-signup" class="btn-lg button-signup" type="submit">Criar Conta</button>
+            <div class="divider-lg2"></div>
+        </div>
+    </section>
+    {% endblock %}
+
+</body>

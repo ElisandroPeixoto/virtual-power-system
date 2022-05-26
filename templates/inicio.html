@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Homepage{% endblock %}
+<body>
+    {% block content %}
+
+    <!-- Section 1 -->
+    <section> 
+        <div>
+            <img class="cover" src="{% static 'img/cover_homepage.png' %}">
+        </div>
+        <div>
+            <h1 class="main-title">
+                Simulações de SEP de Alto Nível
+            </h1>
+            <p class="main-text">
+                O Virtual Power System conta com as principais ferramentas necessárias para simulação de<br>
+                sistemas elétricos de potência de Alta e Média Tensão. Todos os recursos disponíveis em um<br>
+                ambiente virtual em Web, acessável de qualquer lugar
+            </p>
+        </div>
+        <div class="general-resource">
+            <div class="content-resource geracao">Geração</div>
+            <p class="text-resource">
+                Proteção e Automação de Usinas de Geração, abordando
+                desde a máquina síncrona aos dispositivos de manobra
+            </p>
+            <div class="content-resource">Transmissão</div>
+            <p class="text-resource">
+                Simulações de localização de faltas em linhas de transmissão
+                entre outros elementos de proteção
+            </p>
+            <div class="content-resource">Subestação</div>
+            <p class="text-resource">
+                Proteção e Automação de Subestações, desde ramais,
+                barramentos e transformadores de potência
+            </p>
+        </div>
+        <div>
+            <p class="bigsize-text">Cadastre-se agora para ter acesso<br>a todos os recursos disponíveis</p>
+            <a href="{% url 'cadastro' %}"><button class="button btn-lg">Cadastrar-se</button></a>
+        </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="specific-resource"> 
+        <div class="content-specific">
+            <h1>Proteção</h1>
+            <p class="text-specific">
+                Estude, projete e simule as principais funções de proteção dos diversos setores do SEP, com
+                algoritmos de alta precisão e diversas possibilidades de aplicação.
+            </p>
+        </div>
+        <div class="content-specific">
+            <h1 class="logica">Lógicas</h1>
+            <p class="text-specific">
+                Simule projetos de automação de geradores, disjuntores e transformadores utilizando os principais
+                recursos existentes na programação de relés e controladores lógicos, baseados na norma IEC 61131-3. 
+            </p>
+        </div>
+        <div class="content-specific">
+            <h1>Comunicação</h1>
+            <p class="text-specific">
+                Realize estudos e simulações de sistemas que envolvem comunicação entre equipamentos sem a necessidade 
+                de uma infraestrutura de rede. Aplique os fundamentos do protocolo GOOSE em um ambiente 100% virtual.
+            </p>
+        </div>
+    </section>
+    {% endblock %}
+
+</body>

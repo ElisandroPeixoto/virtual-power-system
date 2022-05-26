@@ -1,0 +1,11 @@
+.title-normal {
+    font-size: 20px;
+    color: rgb(6,32,71);
+    font-weight: normal;
+}
+
+.title-bold {
+    font-size: 20px;
+    color: rgb(6,32,71);
+    font-weight: bold;
+}

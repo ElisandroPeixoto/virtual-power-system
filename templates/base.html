@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base_structure/reset.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base_structure/header.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base_structure/footer_lg.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pages_structure/homepage_structure.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pages_structure/login_structure.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pages_structure/signup_structure.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/components/buttons.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/components/titles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/components/text-inputs.css' %}">
+    <script src="https://kit.fontawesome.com/5a5de64e6e.js" crossorigin="anonymous"></script> <!--Icones FontAwesome-->
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo-light">
+            <img src="{% static 'img/logo_light.png' %}"  width="235 "height="91">
+        </div>
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li class="navbar-item"><a href="{% url 'inicio' %}"> Página Inicial </a></li>
+                <li class="navbar-item"><a href="#"> Simulador </a></li>
+                <li class="navbar-item"><a href="#"> Instruções </a></li>
+                {% if user.is_anonymous %}
+                    <li class="navbar-item"><strong><a href="{% url 'login' %}"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;Login</a></strong></li>
+                {% else %}
+                    <li class="navbar-item"><strong><a href="#"><i class="fa-solid fa-user"></i>&nbsp;Meu Perfil</a></strong></li>
+                {% endif %}
+                <li class="navbar-item language"><i class="fa-solid fa-globe"></i>&nbsp;PT|EN</li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer class="footer-large">
+        <div class="logo-dark">
+            <img src="{% static 'img/logo_dark.png' %}">
+        </div>
+        <div class="footer-element">
+            <h2>Mapa do Site</h2>
+            <ul class="footer-list">
+                <li><a href="{% url 'inicio' %}">Página Inicial</a></li>
+                <li><a href="#">Simulador</a></li>
+                <li><a href="#">Instruções</a></li>
+                <li><a href="#">Espaço do Usuário</a></li>
+            </ul>
+        </div>
+        <div class="footer-element">
+            <h2>Contato</h2>
+            <ul class="footer-list">
+                <li><i class="fa-solid fa-at"></i>&nbsp;contato@virtualps.com</li>
+                <li><i class="fa-solid fa-phone"></i>&nbsp;+55 11 0000 0000</li>
+                <li><i class="fa-brands fa-instagram"></i>&nbsp;instagram.com/virtualps</li>
+                <li><i class="fa-brands fa-linkedin-in"></i>&nbsp;linkedin.com/in/virtual-powersys</li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
