@@ -10,6 +10,8 @@ class UsuarioManager(BaseUserManager):
     def _create_user(self, email, password, **extra_fields):
         if not email:
             raise ValueError('E-mail obrigatório')
+        elif not password:
+            raise ValueError('Senha obrigatória')
         email = self.normalize_email(email)
         user = self.model(email=email, username=email, **extra_fields)
         user.set_password(password)
@@ -17,7 +19,7 @@ class UsuarioManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-    def create_user(self, email, password=None, **extra_fields):
+    def create_user(self, email, password, **extra_fields):
         extra_fields.setdefault('is_superuser', False)
 
         return self._create_user(email, password, **extra_fields)

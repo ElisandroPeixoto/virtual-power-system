@@ -21,11 +21,14 @@
                 <input class="input_text-sm" placeholder="Insira sua senha" type="password" name="password">
             </form>
             <button form="form-login" class="button-login btn-lg" type="submit">Login</button>
+            {% if dados_invalidos %}
+                <p class="login-fail">Dados Inválidos</p>
+            {% endif %}
             <div class="divider-sm"></div>
 
             <div class="subscribe">
                 <p class="title-normal">Novo por aqui?</p>
-                <span><a href="#">CRIE SUA CONTA</a></span>
+                <span><a href="{% url 'cadastro' %}">CRIE SUA CONTA</a></span>
             </div>
         </div>
     </section>

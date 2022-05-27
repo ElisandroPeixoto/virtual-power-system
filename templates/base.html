@@ -3,15 +3,8 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/base_structure/reset.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/base_structure/header.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/base_structure/footer_lg.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/pages_structure/homepage_structure.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/pages_structure/login_structure.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/pages_structure/signup_structure.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/components/buttons.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/components/titles.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/components/text-inputs.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/paginas/paginas_estrutura.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/componentes/componentes.css' %}">
     <script src="https://kit.fontawesome.com/5a5de64e6e.js" crossorigin="anonymous"></script> <!--Icones FontAwesome-->
     <title>{% block title %}{% endblock %}</title>
 </head>
@@ -19,7 +12,7 @@
 
     <header>
         <div class="logo-light">
-            <img src="{% static 'img/logo_light.png' %}"  width="235 "height="91">
+            <img src="{% static 'img/logo_light.png' %}"  width="235" height="91">
         </div>
         <nav class="navbar">
             <ul class="navbar-list">
@@ -29,7 +22,7 @@
                 {% if user.is_anonymous %}
                     <li class="navbar-item"><strong><a href="{% url 'login' %}"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;Login</a></strong></li>
                 {% else %}
-                    <li class="navbar-item"><strong><a href="#"><i class="fa-solid fa-user"></i>&nbsp;Meu Perfil</a></strong></li>
+                    <li class="navbar-item"><strong><a href="#"><i class="fa-solid fa-user"></i>&nbsp;Usuário</a></strong></li>
                 {% endif %}
                 <li class="navbar-item language"><i class="fa-solid fa-globe"></i>&nbsp;PT|EN</li>
             </ul>

@@ -55,6 +55,17 @@
                     <input class="input_text-mc" type="text" name="city"><br>
                 </div>
             </form>
+            {% if email_invalido %}
+                <p class="signup-ok">E-mail inválido</p>
+            {% elif existe_email %}
+                <p class="signup-ok">E-mail já cadastrado</p>
+            {% elif senhas_diferentes %}
+                <p class="signup-ok">As senhas não são iguais</p>
+            {% elif campos_vazios %}
+                <p class="signup-ok">Preencha todos os dados</p>
+            {% elif cadastro_efetuado %}
+                <p class="signup-ok">Cadastro efetuado com sucesso!</p>
+            {% endif %}
             <button form="form-signup" class="btn-lg button-signup" type="submit">Criar Conta</button>
             <div class="divider-lg2"></div>
         </div>
