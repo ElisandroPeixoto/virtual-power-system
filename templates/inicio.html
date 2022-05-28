@@ -5,11 +5,9 @@
 <body>
     {% block content %}
 
-    <!-- Section 1 -->
-    <section> 
-        <div>
-            <img class="cover" src="{% static 'img/cover_homepage.png' %}">
-        </div>
+    <!-- Seção 1 -->
+    <section>
+        <img class="cover" src="{% static 'img/cover_homepage.png' %}">
         <div>
             <h1 class="main-title">
                 Simulações de SEP de Alto Nível
@@ -20,48 +18,49 @@
                 ambiente virtual em Web, acessável de qualquer lugar
             </p>
         </div>
-        <div class="general-resource">
-            <div class="content-resource geracao">Geração</div>
-            <p class="text-resource">
+
+        <div class="elements">
+            <div class="elements__content geracao">Geração</div>
+            <p class="elements__text">
                 Proteção e Automação de Usinas de Geração, abordando
                 desde a máquina síncrona aos dispositivos de manobra
             </p>
-            <div class="content-resource">Transmissão</div>
-            <p class="text-resource">
+            <div class="elements__content">Transmissão</div>
+            <p class="elements__text">
                 Simulações de localização de faltas em linhas de transmissão
                 entre outros elementos de proteção
             </p>
-            <div class="content-resource">Subestação</div>
-            <p class="text-resource">
+            <div class="elements__content">Subestação</div>
+            <p class="elements__text">
                 Proteção e Automação de Subestações, desde ramais,
                 barramentos e transformadores de potência
             </p>
         </div>
         <div>
-            <p class="bigsize-text">Cadastre-se agora para ter acesso<br>a todos os recursos disponíveis</p>
-            <a href="{% url 'cadastro' %}"><button class="button btn-lg">Cadastrar-se</button></a>
+            <p class="signup-text">Cadastre-se agora para ter acesso<br>a todos os recursos disponíveis</p>
+            <button class="button-signup btn-lg" onclick="window.location.href={% url 'cadastro' %}">Cadastrar-se</button>
         </div>
     </section>
 
-    <!-- Section 2 -->
-    <section class="specific-resource"> 
-        <div class="content-specific">
+    <!-- Seção 2 -->
+    <section class="resources">
+        <div class="resources__content">
             <h1>Proteção</h1>
-            <p class="text-specific">
+            <p class="resources__content--text">
                 Estude, projete e simule as principais funções de proteção dos diversos setores do SEP, com
                 algoritmos de alta precisão e diversas possibilidades de aplicação.
             </p>
         </div>
-        <div class="content-specific">
+        <div class="resources__content">
             <h1 class="logica">Lógicas</h1>
-            <p class="text-specific">
+            <p class="resources__content--text">
                 Simule projetos de automação de geradores, disjuntores e transformadores utilizando os principais
-                recursos existentes na programação de relés e controladores lógicos, baseados na norma IEC 61131-3. 
+                recursos existentes na programação de relés e controladores lógicos, baseados na norma IEC 61131-3.
             </p>
         </div>
-        <div class="content-specific">
+        <div class="resources__content">
             <h1>Comunicação</h1>
-            <p class="text-specific">
+            <p class="resources__content--text">
                 Realize estudos e simulações de sistemas que envolvem comunicação entre equipamentos sem a necessidade 
                 de uma infraestrutura de rede. Aplique os fundamentos do protocolo GOOSE em um ambiente 100% virtual.
             </p>

@@ -7,28 +7,28 @@
 
     <section class="login">
         <div class="login-box">
-            <div class="login-header">
-                <span class="name-login title-normal">Login</span>
-                <div class="mini-logo"><img src="{% static 'img/logo.png' %}"></div>
-                <div class="divider-lg"></div>
+            <div>
+                <span class="login-box__name title-normal">Login</span>
+                <div class="login-box__logo"><img src="{% static 'img/logo.png' %}"></div>
+                <div class="login-box__divider"></div>
             </div>
 
-            <form id="form-login" class="login-input" method="POST">
+            <form class="login-input" id="form-login" method="POST">
                 {% csrf_token %}
                 <label class="title-normal" >E-mail:</label>
-                <input class="input_text-sm" placeholder="Insira seu e-mail" type="text" name="email"><br>
+                <input class="input-lg" placeholder="Insira seu e-mail" type="text" name="email"><br>
                 <label class="title-normal">Senha:</label>
-                <input class="input_text-sm" placeholder="Insira sua senha" type="password" name="password">
+                <input class="input-lg" placeholder="Insira sua senha" type="password" name="password">
             </form>
-            <button form="form-login" class="button-login btn-lg" type="submit">Login</button>
+            <button class="login-input__button btn-lg" form="form-login" type="submit">Login</button>
             {% if dados_invalidos %}
-                <p class="login-fail">Dados Inválidos</p>
+                <p class="login-input__alert alert-n">Dados Inválidos</p>
             {% endif %}
-            <div class="divider-sm"></div>
+            <div class="login-input__divider"></div>
 
             <div class="subscribe">
                 <p class="title-normal">Novo por aqui?</p>
-                <span><a href="{% url 'cadastro' %}">CRIE SUA CONTA</a></span>
+                <span class="subscribe__link"><a href="{% url 'cadastro' %}">CRIE SUA CONTA</a></span>
             </div>
         </div>
     </section>

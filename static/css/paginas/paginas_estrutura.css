@@ -1,9 +1,9 @@
-/* Base */
+/* --- Base --- */
 @import 'reset.css';
 @import 'header.css';
 @import 'footer_gr.css';
 
-/* Páginas */
+/* --- Páginas --- */
 @import 'inicio.css';
 @import 'login.css';
 @import 'cadastro.css';

@@ -1,4 +1,12 @@
-/* --- Header Structure --- */
+/* Logo principal */
+
+.logo-light {
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 130px;
+}
+
+/* Barra de Navegação */
 
 .navbar {
     width: 100%;
@@ -11,7 +19,7 @@
     list-style: none;
 }
 
-.navbar-item {
+.navbar-list__item {
     float: left; 
     width: fit-content;
     display: block;
@@ -26,13 +34,7 @@
     margin-right: 130px;
 }
 
-.logo-light {
-    position: absolute;
-    margin-top: 5px;
-    margin-left: 130px;
-}
-
-/* --- Links Effects --- */
+/* Efeitos Links */
 
 header a:link {
     color: rgb(6,32,71);

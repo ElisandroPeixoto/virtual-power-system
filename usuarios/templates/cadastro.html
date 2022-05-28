@@ -7,67 +7,67 @@
 
     <section class="signup">
         <div class="signup-box">
-            <div class="signup-header">
-                <span class="name-signup title-normal">Criar Conta</span>
-                <div class="mini-logo2"><img src="{% static 'img/logo.png' %}"></div>
-                <div class="divider-gr"></div>
+            <div>
+                <span class="signup-box__name title-normal">Criar Conta</span>
+                <div class="signup-box__logo"><img src="{% static 'img/logo.png' %}"></div>
+                <div class="signup-box__divider"></div>
             </div>
 
-            <form id="form-signup" class="signup-input" action="{% url 'cadastro' %}" method="POST">
+            <form class="signup-input" id="form-signup" action="{% url 'cadastro' %}" method="POST">
                 {% csrf_token %}
-                <div class="signup-item1">
+                <div class="signup-input__main">
                     <label class="title-normal">E-mail:</label><br>
-                    <input class="input_text-mc" type="text" name="email"><br>
+                    <input class="input-md" type="text" name="email"><br>
                 </div>
 
-                <div class="signup-item2">
+                <div>
                     <label class="title-normal">Senha:</label><br>
-                    <input class="input_text-mc" type="password" name="password"><br>
+                    <input class="input-md" type="password" name="password"><br>
                 </div>
 
-                <div class="signup-item2">
+                <div>
                     <label class="title-normal">Confirmação de Senha:</label><br>
-                    <input class="input_text-mc" type="password" name="confirm-password"><br>
+                    <input class="input-md" type="password" name="confirm-password"><br>
                 </div>
 
-                <div class="signup-item3">
+                <div class="signup-input__name">
                     <label class="title-normal">Primeiro Nome:</label><br>
-                    <input class="input_text-mc" type="text" name="name"><br>
+                    <input class="input-md" type="text" name="name"><br>
                 </div>
 
-                <div class="signup-item3">
+                <div class="signup-input__name">
                     <label class="title-normal">Sobrenome:</label><br>
-                    <input class="input_text-mc" type="text" name="surname"><br>
+                    <input class="input-md" type="text" name="surname"><br>
                 </div>
 
-                <div class="signup-item4">
+                <div class="signup-input__place">
                     <label class="title-normal">País:</label><br>
-                    <input class="input_text-mc" type="text" name="country"><br>
+                    <input class="input-md" type="text" name="country"><br>
                 </div>
 
-                <div class="signup-item4">
+                <div class="signup-input__place">
                     <label class="title-normal">Estado:</label><br>
-                    <input class="input_text-mc" type="text" name="state"><br>
+                    <input class="input-md" type="text" name="state"><br>
                 </div>
 
-                <div class="signup-item4">
+                <div class="signup-input__place">
                     <label class="title-normal">Cidade:</label><br>
-                    <input class="input_text-mc" type="text" name="city"><br>
+                    <input class="input-md" type="text" name="city"><br>
                 </div>
             </form>
             {% if email_invalido %}
-                <p class="signup-ok">E-mail inválido</p>
+                <p class="signup-alert alert-n">E-mail inválido</p>
             {% elif existe_email %}
-                <p class="signup-ok">E-mail já cadastrado</p>
+                <p class="signup-alert alert-n">E-mail já cadastrado</p>
             {% elif senhas_diferentes %}
-                <p class="signup-ok">As senhas não são iguais</p>
+                <p class="signup-alert alert-n">As senhas não são iguais</p>
             {% elif campos_vazios %}
-                <p class="signup-ok">Preencha todos os dados</p>
+                <p class="signup-alert alert-n">Preencha todos os dados</p>
             {% elif cadastro_efetuado %}
-                <p class="signup-ok">Cadastro efetuado com sucesso!</p>
+                <p class="signup-alert alert-p">Cadastro efetuado com sucesso!</p>
             {% endif %}
-            <button form="form-signup" class="btn-lg button-signup" type="submit">Criar Conta</button>
-            <div class="divider-lg2"></div>
+            <button class="signup-input__button btn-lg" form="form-signup" type="submit">Criar Conta</button>
+            <div class="signup-input__divider"></div>
         </div>
     </section>
     {% endblock %}

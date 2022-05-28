@@ -1,3 +1,5 @@
+/* Botao Grande */
+
 .btn-lg {
     width: 152px;
     height: 40px;
@@ -5,4 +7,24 @@
     color: white;
     font-size: 18px;
     border-radius: 5px;
+    border: none;
+}
+
+.btn-lg:hover {
+    background-color: rgb(8,43,97);
+}
+
+/* Botao Pequeno */
+
+.btn-sm {
+    width: 107px;
+    height: 40px;
+    background-color: rgb(12,66,148);
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.btn-sm:hover {
+    background-color: rgb(8,43,97);
 }

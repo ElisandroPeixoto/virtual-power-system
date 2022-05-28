@@ -16,15 +16,15 @@
         </div>
         <nav class="navbar">
             <ul class="navbar-list">
-                <li class="navbar-item"><a href="{% url 'inicio' %}"> Página Inicial </a></li>
-                <li class="navbar-item"><a href="#"> Simulador </a></li>
-                <li class="navbar-item"><a href="#"> Instruções </a></li>
+                <li class="navbar-list__item"><a href="{% url 'inicio' %}"> Página Inicial </a></li>
+                <li class="navbar-list__item"><a href="#"> Simulador </a></li>
+                <li class="navbar-list__item"><a href="#"> Instruções </a></li>
                 {% if user.is_anonymous %}
-                    <li class="navbar-item"><strong><a href="{% url 'login' %}"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;Login</a></strong></li>
+                    <li class="navbar-list__item"><strong><a href="{% url 'login' %}"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;Login</a></strong></li>
                 {% else %}
-                    <li class="navbar-item"><strong><a href="#"><i class="fa-solid fa-user"></i>&nbsp;Usuário</a></strong></li>
+                    <li class="navbar-list__item"><strong><a href="#"><i class="fa-solid fa-user"></i>&nbsp;{{ user.first_name }}</a></strong></li>
                 {% endif %}
-                <li class="navbar-item language"><i class="fa-solid fa-globe"></i>&nbsp;PT|EN</li>
+                <li class="navbar-list__item language"><i class="fa-solid fa-globe"></i>&nbsp;PT|EN</li>
             </ul>
         </nav>
     </header>
@@ -32,22 +32,22 @@
     {% block content %}
     {% endblock %}
 
-    <footer class="footer-large">
-        <div class="logo-dark">
+    <footer class="footer-gr">
+        <div class="footer-gr__logo">
             <img src="{% static 'img/logo_dark.png' %}">
         </div>
-        <div class="footer-element">
+        <div class="footer-gr__menu">
             <h2>Mapa do Site</h2>
-            <ul class="footer-list">
+            <ul class="footer-gr__menu__list">
                 <li><a href="{% url 'inicio' %}">Página Inicial</a></li>
                 <li><a href="#">Simulador</a></li>
                 <li><a href="#">Instruções</a></li>
                 <li><a href="#">Espaço do Usuário</a></li>
             </ul>
         </div>
-        <div class="footer-element">
+        <div class="footer-gr__menu">
             <h2>Contato</h2>
-            <ul class="footer-list">
+            <ul class="footer-gr__menu__list">
                 <li><i class="fa-solid fa-at"></i>&nbsp;contato@virtualps.com</li>
                 <li><i class="fa-solid fa-phone"></i>&nbsp;+55 11 0000 0000</li>
                 <li><i class="fa-brands fa-instagram"></i>&nbsp;instagram.com/virtualps</li>

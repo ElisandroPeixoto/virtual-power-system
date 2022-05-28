@@ -1,11 +1,30 @@
 .title-normal {
-    font-size: 20px;
+    font-size: 18px;
+    color: rgb(6,32,71);
+    font-weight: normal;
+}
+
+.title-normal-lg {
+    font-size: 28px;
     color: rgb(6,32,71);
     font-weight: normal;
 }
 
 .title-bold {
-    font-size: 20px;
+    font-size: 18px;
     color: rgb(6,32,71);
     font-weight: bold;
+}
+
+.title-bold-lg {
+    font-size: 28px;
+    color: rgb(6,32,71);
+    font-weight: bold;
+}
+
+.title-underline {
+    font-size: 18px;
+    color: rgb(6,32,71);
+    font-weight: normal;
+    text-decoration: underline;
 }

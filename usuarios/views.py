@@ -12,14 +12,14 @@ def login(request):
         senha = request.POST.get('password')
         login_usuario = authenticate(email=email, password=senha)
 
-        if login_usuario:  # Se e-mail e senha são dados cadastrados
-            django_login(request, login_usuario)  # Autenticação do usuario
-            return redirect('inicio')  # Retorna para a página inicial
-        else:
+        if not login_usuario:  # Se e-mail e senha são dados cadastrados
             falha_login = {
                 'dados_invalidos': True  # Detecta que os dádos inseridos são inválidos
             }
             return render(request, 'login.html', falha_login)
+        else:
+            django_login(request, login_usuario)  # Autenticação do usuario
+            return redirect('inicio')
 
 
 def cadastro(request):

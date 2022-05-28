@@ -1,3 +1,5 @@
+/* Imagem Fundo */
+
 .login::before {
     content: "";
     top: 100px;
@@ -12,6 +14,9 @@
     opacity: 0.06;
     z-index: -1;
 }
+
+/* Caixa Login */
+
 .login-box {
     display: block;
     width: 629px;
@@ -25,19 +30,19 @@
     z-index: 1;
 }
 
-.name-login {
+.login-box__name {
     float: left;
     margin-top: 35px;
     margin-left: 38px;
 }
 
-.mini-logo {
+.login-box__logo {
     float: right;
     margin-top: 25px;
     margin-right: 30px;
 }
 
-.divider-lg {
+.login-box__divider {
     display: block;
     position: absolute;
     width: 560px;
@@ -48,6 +53,8 @@
     margin-right: 30px;
 }
 
+/* Entrada de Dados Login */
+
 .login-input {
     display: flex;
     flex-direction: column;
@@ -57,22 +64,22 @@
 
 }
 
-.button-login {
+.login-input__button {
     display: block;
     margin-top: 13px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.login-fail {
+.login-input__alert {
+    display: block;
     text-align: center;
-    font-size: 15px;
     margin-top: 20px;
-    font-weight: bold;
-    color: red;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.divider-sm {
+.login-input__divider {
     width: 560px;
     height: 0px;
     border: 1px solid rgb(6,32,71);
@@ -81,35 +88,37 @@
     margin-right: 30px;
 }
 
+/* Opção de Inscrição */
+
 .subscribe {
     text-align: center;
     margin-top: 5px;
 }
 
-.subscribe span {
+.subscribe__link {
     display: block;
     margin-top: 13px;
     font-size: 18px;
     font-weight: bold;
 }
 
-.subscribe span a:link {
+.subscribe__link a:link {
     color: rgb(6,32,71);
     background-color: transparent;
     text-decoration: none;
 }
 
-.subscribe span a:link {
+.subscribe__link a:link {
     color: rgb(6,32,71);
     background-color: transparent;
     text-decoration: none;
 }
 
-.subscribe span a:visited {
+.subscribe__link a:visited {
     color: rgb(6,32,71);
     text-decoration: none;
 }
 
-.subscribe span a:hover {
+.subscribe__link a:hover {
     text-decoration: underline;
 }

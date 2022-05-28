@@ -1,4 +1,4 @@
-/* Section 1 */
+/* Seção 1 */
 
 .cover {
     width: 100%;
@@ -22,14 +22,14 @@
     line-height: 25px;
 }
 
-.general-resource {
+.elements {
     display: flex;
     margin-top: 58px;
     justify-content: center;
     align-items: center;
 }
 
-.content-resource {
+.elements__content {
     box-sizing: border-box;
     width: 115px;
     height: 107px;
@@ -43,7 +43,7 @@
     color: white;
 }
 
-.text-resource {
+.elements__text {
     display: block;
     width: 230px;
     height: 100px;
@@ -57,23 +57,23 @@
     margin-left: 0px;
 }
 
-.bigsize-text{
+.signup-text{
     text-align: center;
     margin-top: 33px;
     font-size: 28px;
     line-height: 35px;
 }
 
-.button{
+.button-signup{
     display: block;
     margin-top: 23px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Section 2 */
+/* Seção 2 */
 
-.specific-resource{
+.resources{
     position: relative;
     display: grid;
     grid-template-columns: auto auto;
@@ -84,7 +84,7 @@
     justify-content: center;
 }
 
-.specific-resource::before {
+.resources::before {
     content: "";
     top: 0px;
     left: 0px;
@@ -99,7 +99,7 @@
     z-index: -1;
 }
 
-.content-specific {
+.resources__content {
     display: block;
     width: 350px;
     height: 168px;
@@ -107,7 +107,7 @@
     text-align: justify;
 }
 
-.text-specific {
+.resources__content--text {
     line-height: 25px;
     padding-top: 10px;
 }
