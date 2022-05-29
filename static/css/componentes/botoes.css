@@ -8,6 +8,7 @@
     font-size: 18px;
     border-radius: 5px;
     border: none;
+    cursor: pointer;
 }
 
 .btn-lg:hover {
@@ -24,6 +25,7 @@
     font-size: 18px;
     border-radius: 5px;
     border: none;
+    cursor: pointer;
 }
 
 .btn-sm:hover {

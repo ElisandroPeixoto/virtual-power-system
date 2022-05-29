@@ -12,12 +12,12 @@
     </div>
     <div class="profile-data">
         <p class="profile-data__left title-underline">Dados Pessoais</p>
-        <p class="profile-data__left title-bold">Nome: <span class="title-normal">Usuario</span></p>
-        <p class="profile-data__left title-bold">E-mail: <span class="title-normal">usuaio@gmail.com</span></p>
-        <p class="profile-data__left title-bold">Data de Cadastro: <span class="title-normal">01/01/2022</span></p>
-        <p class="profile-data__right--1 title-bold">Cidade: <span class="title-normal">Maceió</span></p>
-        <p class="profile-data__right--2 title-bold">Estado: <span class="title-normal">Alagoas</span></p>
-        <p class="profile-data__right title-bold">País: <span class="title-normal">Brasil</span></p>
+        <p class="profile-data__left title-bold">Nome: <span class="title-normal">{{ user.first_name }} {{ user.last_name }}</span></p>
+        <p class="profile-data__left title-bold">E-mail: <span class="title-normal">{{ user.email }}</span></p>
+        <p class="profile-data__left title-bold">Data de Cadastro: <span class="title-normal">{{ user.date_joined.date }}</span></p>
+        <p class="profile-data__right--1 title-bold">Cidade: <span class="title-normal">{{ user.cidade }}</span></p>
+        <p class="profile-data__right--2 title-bold">Estado: <span class="title-normal">{{ user.estado }}</span></p>
+        <p class="profile-data__right title-bold">País: <span class="title-normal">{{ user.pais }}</span></p>
         <button class="profile-data__button btn-lg">Alterar Dados</button>
     </div>
     <div class="profile-data-divider div-sm"></div>
