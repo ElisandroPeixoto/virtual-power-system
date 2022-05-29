@@ -22,7 +22,7 @@
                 {% if user.is_anonymous %}
                     <li class="navbar-list__item"><strong><a href="{% url 'login' %}"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;Login</a></strong></li>
                 {% else %}
-                    <li class="navbar-list__item"><strong><a href="#"><i class="fa-solid fa-user"></i>&nbsp;{{ user.first_name }}</a></strong></li>
+                    <li class="navbar-list__item"><strong><a href="{% url 'perfil' %}"><i class="fa-solid fa-user"></i>&nbsp;{{ user.first_name }}</a></strong></li>
                 {% endif %}
                 <li class="navbar-list__item language"><i class="fa-solid fa-globe"></i>&nbsp;PT|EN</li>
             </ul>

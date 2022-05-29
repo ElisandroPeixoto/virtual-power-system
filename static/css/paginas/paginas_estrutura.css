@@ -2,8 +2,9 @@
 @import 'reset.css';
 @import 'header.css';
 @import 'footer_gr.css';
-
-/* --- Páginas --- */
 @import 'inicio.css';
-@import 'login.css';
-@import 'cadastro.css';
+
+/* --- App: usuarios --- */
+@import url('usuarios/login.css');
+@import url('usuarios/cadastro.css');
+@import url('usuarios/perfil.css');

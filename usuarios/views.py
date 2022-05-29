@@ -1,7 +1,9 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .models import CustomUsuario
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as django_login
+from django.contrib.auth import logout as django_logout
 
 
 def login(request):
@@ -80,3 +82,14 @@ def cadastro(request):
                 'cadastro_efetuado': True
             }
             return render(request, 'cadastro.html', cadastro_efetuado)
+
+
+@login_required
+def perfil(request):
+    if request.method == "GET":
+        return render(request, 'perfil.html')
+
+
+def logout(request):
+    django_logout(request)
+    return render(request, 'inicio.html')

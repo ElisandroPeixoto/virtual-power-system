@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Meu Perfil{% endblock %}
+<body>
+    {% block content %}
+
+    <div class="profile">
+        <span class="title-bold-lg">Espaço do Usuário</span>
+        <div class="profile__logo"><img src="../../static/img/logo.png"></div>
+        <div class="profile__divider div-lg"></div>
+    </div>
+    <div class="profile-data">
+        <p class="profile-data__left title-underline">Dados Pessoais</p>
+        <p class="profile-data__left title-bold">Nome: <span class="title-normal">Usuario</span></p>
+        <p class="profile-data__left title-bold">E-mail: <span class="title-normal">usuaio@gmail.com</span></p>
+        <p class="profile-data__left title-bold">Data de Cadastro: <span class="title-normal">01/01/2022</span></p>
+        <p class="profile-data__right--1 title-bold">Cidade: <span class="title-normal">Maceió</span></p>
+        <p class="profile-data__right--2 title-bold">Estado: <span class="title-normal">Alagoas</span></p>
+        <p class="profile-data__right title-bold">País: <span class="title-normal">Brasil</span></p>
+        <button class="profile-data__button btn-lg">Alterar Dados</button>
+    </div>
+    <div class="profile-data-divider div-sm"></div>
+
+    <div class="simulations">
+        <span class="title-underline">Registro de Simulações</span>
+        <table class="simu-table">
+            <tr class="title-bold">
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Tipo</th>
+                <th>Última Atualização</th>
+                <th>Ações</th>
+            </tr>
+            <tr class="simu-table__elements">
+                <td>1</td>
+                <td>Simulação Exemplo</td>
+                <td>Subestação</td>
+                <td>01/01/2022</td>
+                <td>
+                    <button class="btn-sm">Editar</button>
+                    <button class="btn-sm">Deletar</button>
+                </td>
+            </tr>
+        </table>
+
+        <button class="button-logout btn-sm" type="submit" onclick="window.location.href={% url 'logout' %}">Logout</button>
+    </div>
+    
+    {% endblock %}
+</body>
