@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Gerenciar Perfil{% endblock %}
+<body>
+    {% block content %}
+    <section class="change-data-background">
+        <div class="change-data-head">
+            <span class="title-bold-lg">Alterar Dados Cadastrais</span>
+            <div class="change-data-head__logo"><img src="../../static/img/logo.png"></div>
+            <div class="change-data-head__divider div-lg"></div>
+        </div>
+
+        <form class="change-data-form">
+            <div class="change-data-form__left">
+                <label class="title-normal">E-mail:</label><br>
+                <input class="input-lg">
+            </div>
+
+            <div class="change-data-form__left">
+                <label class="title-normal">Primeiro Nome:</label><br>
+                <input class="input-lg">
+            </div>
+
+            <div class="change-data-form__left">
+                <label class="title-normal">Sobrenome:</label><br>
+                <input class="input-lg">
+            </div>
+
+            <div class="change-data-form__center">
+                <label class="title-normal">Cidade:</label><br>
+                <input class="input-lg">
+            </div>
+
+            <div class="change-data-form__center--2">
+                <label class="title-normal">Estado:</label><br>
+                <input class="input-lg">
+            </div>
+
+            <div class="change-data-form__center--3">
+                <label class="title-normal">País:</label><br>
+                <input class="input-lg">
+            </div>
+
+            <div class="change-data-form__right">
+                <label class="title-normal">Senha Atual:</label><br>
+                <input class="input-lg" type="password">
+            </div>
+
+            <div  class="change-data-form__right--2">
+                <label class="title-normal">Nova Senha:</label><br>
+                <input class="input-lg" type="password">
+            </div>
+
+            <div  class="change-data-form__right--3">
+                <label class="title-normal">Confirmação de Senha:</label><br>
+                <input class="input-lg" type="password">
+            </div>
+        </form>
+        <button class="change-data__button btn-lg">Atualizar</button>
+    </section>
+    {% endblock %}
+
+</body>

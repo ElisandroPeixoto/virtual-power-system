@@ -93,3 +93,7 @@ def perfil(request):
 def logout(request):
     django_logout(request)
     return render(request, 'inicio.html')
+
+
+def gerenciar_perfil(request):
+    return render(request, 'gerenciar_perfil.html')

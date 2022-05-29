@@ -1,0 +1,92 @@
+.change-data-background::before {
+    content: "";
+    top: 100px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+    background-image: url("../../../img/background_login.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.06;
+    z-index: -1;
+}
+
+/* Titulo da Página */
+
+.change-data-head{
+    display: block;
+    margin-top: 88px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1170px;
+    height: 58px;
+}
+
+.change-data-head__logo{
+    float: right;
+    margin-right: -12px;
+}
+
+.change-data-head__divider{
+    margin-top: 9px;
+    width: 1170px;
+}
+
+/* Formulário */
+
+.change-data-form{
+    display: grid;
+    width: 1170px;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: auto auto auto;
+    row-gap: 20px;
+    column-gap: 135px;
+}
+
+.change-data-form__left{
+    grid-column: 1;
+}
+
+.change-data-form__center{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.change-data-form__center--2{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.change-data-form__center--3{
+    grid-column: 2;
+    grid-row: 3;
+
+}
+
+.change-data-form__right{
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.change-data-form__right--2{
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.change-data-form__right--3{
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.change-data__button {
+    display: block;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 250px;
+}
