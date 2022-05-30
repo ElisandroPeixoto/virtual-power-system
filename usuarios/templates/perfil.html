@@ -18,7 +18,7 @@
         <p class="profile-data__right--1 title-bold">Cidade: <span class="title-normal">{{ user.cidade }}</span></p>
         <p class="profile-data__right--2 title-bold">Estado: <span class="title-normal">{{ user.estado }}</span></p>
         <p class="profile-data__right title-bold">País: <span class="title-normal">{{ user.pais }}</span></p>
-        <button class="profile-data__button btn-lg" onclick="window.location.href={% url 'gerenciar_perfil' %}">Alterar Dados</button>
+        <button class="profile-data__button btn-lg"><a href="{% url 'gerenciar_perfil' %}">Alterar Dados</a></button>
     </div>
     <div class="profile-data-divider div-sm"></div>
 
@@ -44,7 +44,7 @@
             </tr>
         </table>
 
-        <button class="button-logout btn-sm" type="submit" onclick="window.location.href={% url 'logout' %}">Logout</button>
+        <button class="button-logout btn-sm" type="submit"><a href="{% url 'logout' %}">Logout</a></button>
     </div>
     
     {% endblock %}
