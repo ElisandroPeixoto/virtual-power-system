@@ -4,6 +4,8 @@ from .models import CustomUsuario
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as django_login
 from django.contrib.auth import logout as django_logout
+from .forms import AlterarCustomUsuario
+from django.http import HttpResponse
 
 
 def login(request):
@@ -96,4 +98,13 @@ def logout(request):
 
 
 def gerenciar_perfil(request):
-    return render(request, 'gerenciar_perfil.html')
+    if request.method == "GET":
+        return render(request, 'gerenciar_perfil.html')
+    else:
+        alterar_usuario = AlterarCustomUsuario(request.POST, instance=request.user)
+
+        if alterar_usuario.is_valid():
+            alterar_usuario.save()
+            return render(request, 'perfil.html')
+        else:
+            return HttpResponse('Erro')

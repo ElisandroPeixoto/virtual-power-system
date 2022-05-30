@@ -15,13 +15,13 @@
     background-color: rgb(8,43,97);
 }
 
-.btn-lg a:link{
+.btn-lg__link:link{
     color: white;
     background-color: transparent;
     text-decoration: none;
 }
 
-.btn-lg a:visited {
+.btn-lg__link:visited {
     color: white;
     text-decoration: none;
 }
@@ -43,13 +43,13 @@
     background-color: rgb(8,43,97);
 }
 
-.btn-sm a:link{
+.btn-sm__link a:link{
     color: white;
     background-color: transparent;
     text-decoration: none;
 }
 
-.btn-sm a:visited {
+.btn-sm__link a:visited {
     color: white;
     text-decoration: none;
 }

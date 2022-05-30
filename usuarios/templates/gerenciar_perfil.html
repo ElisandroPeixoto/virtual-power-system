@@ -11,35 +11,36 @@
             <div class="change-data-head__divider div-lg"></div>
         </div>
 
-        <form class="change-data-form">
+        <form class="change-data-form" id="change-data" action="{% url 'gerenciar_perfil' %}" method="POST">
+            {% csrf_token %}
             <div class="change-data-form__left">
                 <label class="title-normal">E-mail:</label><br>
-                <input class="input-lg">
+                <input class="input-lg" name="email" value="{{ user.email }}">
             </div>
 
             <div class="change-data-form__left">
                 <label class="title-normal">Primeiro Nome:</label><br>
-                <input class="input-lg">
+                <input class="input-lg" type="text" name="first_name" value="{{ user.first_name }}">
             </div>
 
             <div class="change-data-form__left">
                 <label class="title-normal">Sobrenome:</label><br>
-                <input class="input-lg">
+                <input class="input-lg" name="last_name" value="{{ user.last_name }}">
             </div>
 
             <div class="change-data-form__center">
                 <label class="title-normal">Cidade:</label><br>
-                <input class="input-lg">
+                <input class="input-lg" name="cidade" value="{{ user.cidade }}">
             </div>
 
             <div class="change-data-form__center--2">
                 <label class="title-normal">Estado:</label><br>
-                <input class="input-lg">
+                <input class="input-lg" name="estado" value="{{ user.estado }}">
             </div>
 
             <div class="change-data-form__center--3">
                 <label class="title-normal">País:</label><br>
-                <input class="input-lg">
+                <input class="input-lg" name="pais" value="{{ user.pais }}">
             </div>
 
             <div class="change-data-form__right">
@@ -57,7 +58,7 @@
                 <input class="input-lg" type="password">
             </div>
         </form>
-        <button class="change-data__button btn-lg">Atualizar</button>
+        <button class="change-data__button btn-lg" type="submit" form="change-data">Atualizar</button>
     </section>
     {% endblock %}
 

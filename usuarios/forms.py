@@ -23,4 +23,4 @@ class AlterarCustomUsuario(UserChangeForm):
 
     class Meta:
         model = CustomUsuario
-        fields = ('first_name', 'last_name', 'pais', 'estado', 'cidade')
+        fields = ('email', 'first_name', 'last_name', 'pais', 'estado', 'cidade')
