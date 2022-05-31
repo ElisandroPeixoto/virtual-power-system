@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Gerenciar Perfil{% endblock %}
+<body>
+    {% block content %}
+    <section class="change-password-background">
+        <div class="change-password-head">
+            <span class="title-bold-lg">Alterar Senha</span>
+            <div class="change-password-head__logo"><img src="../../static/img/logo.png"></div>
+            <div class="change-password-head__divider div-lg"></div>
+        </div>
+
+        <form class="change-password-form" id="change-pwd" action="{% url 'alterar_senha' %}" method="POST">
+            {% csrf_token %}
+            <div class="change-password-form__content">
+                <label class="title-normal">Senha Atual:</label><br>
+                <input class="input-lg" type="password" name="old_password" required>
+            </div>
+
+            <div class="change-password-form__content">
+                <label class="title-normal">Nova Senha:</label><br>
+                <input class="input-lg" type="password" name="new_password1" required>
+            </div>
+
+            <div class="change-password-form__content">
+                <label class="title-normal">Confirme a Nova Senha:</label><br>
+                <input class="input-lg" type="password" name="new_password2" required>
+            </div>
+        </form>
+
+        <div class="change-pwd-require">
+            <p class="change-pwd-require__title">Requisitos de senha:</p>
+            <ul>
+                <li>Mínimo 8 caracteres</li>
+                <li>Não deve ser completamente numérica</li>
+                <li>Não deve ser igual às demais informações pessoais</li>
+            </ul>
+        </div>
+
+        {% if falha_alteracao %}
+            <p class="alert-n">Dados inválidos. Tente novamente</p>
+        {% elif alterado_sucesso %}
+            <p class="alert-p">Senha alterada com sucesso!</p>
+        {% endif %}
+
+        <button class="change-password__button btn-lg" type="submit" form="change-pwd">Enviar</button>
+    </section>
+    {% endblock %}
+
+</body>

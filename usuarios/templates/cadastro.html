@@ -17,55 +17,70 @@
                 {% csrf_token %}
                 <div class="signup-input__main">
                     <label class="title-normal">E-mail:</label><br>
-                    <input class="input-md" type="text" name="email"><br>
+                    <input class="input-md" type="text" name="email" required><br>
                 </div>
 
                 <div>
                     <label class="title-normal">Senha:</label><br>
-                    <input class="input-md" type="password" name="password"><br>
+                    <input class="input-md" type="password" name="password" required><br>
                 </div>
 
                 <div>
                     <label class="title-normal">Confirmação de Senha:</label><br>
-                    <input class="input-md" type="password" name="confirm-password"><br>
+                    <input class="input-md" type="password" name="confirm-password" required><br>
                 </div>
 
                 <div class="signup-input__name">
                     <label class="title-normal">Primeiro Nome:</label><br>
-                    <input class="input-md" type="text" name="name"><br>
+                    <input class="input-md" type="text" name="name" required><br>
                 </div>
 
                 <div class="signup-input__name">
                     <label class="title-normal">Sobrenome:</label><br>
-                    <input class="input-md" type="text" name="surname"><br>
+                    <input class="input-md" type="text" name="surname" required><br>
                 </div>
 
                 <div class="signup-input__place">
                     <label class="title-normal">País:</label><br>
-                    <input class="input-md" type="text" name="country"><br>
+                    <input class="input-md" type="text" name="country" required><br>
                 </div>
 
                 <div class="signup-input__place">
                     <label class="title-normal">Estado:</label><br>
-                    <input class="input-md" type="text" name="state"><br>
+                    <input class="input-md" type="text" name="state" required><br>
                 </div>
 
                 <div class="signup-input__place">
                     <label class="title-normal">Cidade:</label><br>
-                    <input class="input-md" type="text" name="city"><br>
+                    <input class="input-md" type="text" name="city" required><br>
                 </div>
             </form>
+
+            <div class="signup-pwd-require">
+                <p class="signup-pwd-require__title">Requisitos de senha:</p>
+                <ul>
+                    <li>Mínimo 8 caracteres</li>
+                    <li>Não deve ser completamente numérica</li>
+                    <li>Não deve ser igual às demais informações pessoais</li>
+                </ul>
+            </div>
+
             {% if email_invalido %}
-                <p class="signup-alert alert-n">E-mail inválido</p>
+                <p class="alert-n">E-mail inválido</p>
             {% elif existe_email %}
-                <p class="signup-alert alert-n">E-mail já cadastrado</p>
+                <p class="alert-n">E-mail já cadastrado</p>
             {% elif senhas_diferentes %}
-                <p class="signup-alert alert-n">As senhas não são iguais</p>
-            {% elif campos_vazios %}
-                <p class="signup-alert alert-n">Preencha todos os dados</p>
+                <p class="alert-n">As senhas não são iguais</p>
+            {% elif senhafacil %}
+                <p class="alert-n">A senha não deve ser igual a informação pessoal</p>
+            {% elif senha_numerica %}
+                <p class="alert-n">A senha não deve conter apenas números</p>
+            {% elif senha_curta %}
+                <p class="alert-n">A senha deve ter no mínimo 8 caracteres</p>
             {% elif cadastro_efetuado %}
-                <p class="signup-alert alert-p">Cadastro efetuado com sucesso!</p>
+                <p class="alert-p">Cadastro efetuado com sucesso!</p>
             {% endif %}
+
             <button class="signup-input__button btn-lg" form="form-signup" type="submit">Criar Conta</button>
             <div class="signup-input__divider div-lg"></div>
         </div>

@@ -1,11 +1,11 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .models import CustomUsuario
-from django.contrib.auth import authenticate
+from django.contrib.auth.forms import PasswordChangeForm
+from django.contrib.auth import authenticate, update_session_auth_hash
 from django.contrib.auth import login as django_login
 from django.contrib.auth import logout as django_logout
 from .forms import AlterarCustomUsuario
-from django.http import HttpResponse
 
 
 def login(request):
@@ -39,30 +39,46 @@ def cadastro(request):
         estado = request.POST.get('state').capitalize()
         cidade = request.POST.get('city').capitalize()
 
-        dados_usuario = [email, senha1, senha2, nome, sobrenome, pais, estado, cidade]
-
         # Verificação de Dados Cadastrais
-        for dados in dados_usuario:
-            if dados == '':
-                campos_vazios = {
-                    'campos_vazios': True
-                }
-                return render(request, 'cadastro.html', campos_vazios)
-
         novo_usuario = CustomUsuario.objects.filter(username=email).first()
+        dados_pessoais = [email, nome, sobrenome, pais, estado, cidade]
+        for dados in dados_pessoais:
+            if senha1 == dados:
+                senha_facil = True
+            else:
+                senha_facil = False
+
         if email.find('@') == -1:  # Se o e-mail inserido não tiver um '@'
             email_invalido = {
                 'email_invalido': True
             }
             return render(request, 'cadastro.html', email_invalido)
 
-        elif novo_usuario:  # Verifica se o e-mail já foi cadastrado
+        elif novo_usuario:
             existe_email = {
                 'existe_email': True  # E-mail já existe
             }
             return render(request, 'cadastro.html', existe_email)
 
-        elif senha1 != senha2:  # Verifica se as senhas foram digitadas corretamente
+        elif senha_facil:
+            senhafacil = {
+                'senhafacil': True  # Senha igual a algum dado pessoal
+            }
+            return render(request, 'cadastro.html', senhafacil)
+
+        elif senha1.isnumeric():
+            senha_numerica = {
+                'senha_numerica': True  # Senha contém apenas números
+            }
+            return render(request, 'cadastro.html', senha_numerica)
+
+        elif len(senha1) < 8:
+            senha_curta = {
+                'senha_curta': True  # Senha muito curta
+            }
+            return render(request, 'cadastro.html', senha_curta)
+
+        elif senha1 != senha2:
             senhas_diferentes = {
                 'senhas_diferentes': True  # Senhas não conferem entre si
             }
@@ -101,10 +117,28 @@ def gerenciar_perfil(request):
     if request.method == "GET":
         return render(request, 'gerenciar_perfil.html')
     else:
+        # Alteração de Dados
         alterar_usuario = AlterarCustomUsuario(request.POST, instance=request.user)
-
         if alterar_usuario.is_valid():
             alterar_usuario.save()
             return render(request, 'perfil.html')
+
+
+def alterar_senha(request):
+    if request.method == "GET":
+        return render(request, 'alterar_senha.html')
+    else:
+        # Alteração de Senha
+        nova_senha = PasswordChangeForm(data=request.POST, user=request.user)
+        if nova_senha.is_valid():
+            nova_senha.save()
+            update_session_auth_hash(request, nova_senha.user)
+            alterado_sucesso = {
+                'alterado_sucesso': True
+            }
+            return render(request, 'alterar_senha.html', alterado_sucesso)
         else:
-            return HttpResponse('Erro')
+            falha_alteracao = {
+                'falha_alteracao': True
+            }
+            return render(request, 'alterar_senha.html', falha_alteracao)

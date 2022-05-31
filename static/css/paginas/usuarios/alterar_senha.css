@@ -1,0 +1,74 @@
+.change-password-background::before {
+    content: "";
+    top: 100px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+    background-image: url("../../../img/background_login.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.06;
+    z-index: -1;
+}
+
+/* Titulo da Página */
+
+.change-password-head{
+    display: block;
+    margin-top: 88px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1170px;
+    height: 58px;
+}
+
+.change-password-head__logo{
+    float: right;
+    margin-right: -12px;
+}
+
+.change-password-head__divider{
+    margin-top: 9px;
+    width: 1170px;
+}
+
+/* Formulário */
+
+.change-password-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 55px;
+}
+
+.change-password-form__content{
+    margin-bottom: 20px;
+}
+
+/* Requisitos de Senha */
+
+.change-pwd-require{
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1170px;
+    font-size: 16px;
+    color: rgb(6,32,71);
+}
+
+.change-pwd-require__title{
+    font-weight: bold;
+}
+
+/* Botão */
+
+.change-password__button {
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 45px;
+}

@@ -18,7 +18,10 @@
         <p class="profile-data__right--1 title-bold">Cidade: <span class="title-normal">{{ user.cidade }}</span></p>
         <p class="profile-data__right--2 title-bold">Estado: <span class="title-normal">{{ user.estado }}</span></p>
         <p class="profile-data__right title-bold">País: <span class="title-normal">{{ user.pais }}</span></p>
-        <a class="btn-lg__link" href="{% url 'gerenciar_perfil' %}"><button class="profile-data__button btn-lg">Alterar Dados</button></a>
+    </div>
+    <div class="change-buttons">
+        <a class="btn-lg__link" href="{% url 'gerenciar_perfil' %}"><button class="change-buttons__profile btn-lg">Alterar Perfil</button></a>
+        <a class="btn-lg__link" href="{% url 'alterar_senha' %}"><button class="change-buttons__password btn-lg">Alterar Senha</button></a>
     </div>
     <div class="profile-data-divider div-sm"></div>
 
@@ -31,16 +34,6 @@
                 <th>Tipo</th>
                 <th>Última Atualização</th>
                 <th>Ações</th>
-            </tr>
-            <tr class="simu-table__elements">
-                <td>1</td>
-                <td>Simulação Exemplo</td>
-                <td>Subestação</td>
-                <td>01/01/2022</td>
-                <td>
-                    <button class="btn-sm">Editar</button>
-                    <button class="btn-sm">Deletar</button>
-                </td>
             </tr>
         </table>
 
