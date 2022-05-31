@@ -1,1 +1,1 @@
-web: gunicorn virtual-power-system.wsgi:application --log-file -
+web: gunicorn virtual-power-system.wsgi --log-file -
