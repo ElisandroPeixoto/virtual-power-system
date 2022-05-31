@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Aplicações
+    'virtual_power_system',
     'usuarios',
 ]
 
