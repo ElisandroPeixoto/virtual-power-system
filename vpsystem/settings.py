@@ -1,6 +1,7 @@
 from pathlib import Path
 import os
 from decouple import config
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -13,7 +14,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -34,7 +35,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',  # Ativar quando entrar em produção
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Ativar quando entrar em produção
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -67,15 +68,10 @@ WSGI_APPLICATION = 'vpsystem.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+
+# Usando PostgreeSQL com Heroku
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',  # Driver do BD
-        'NAME': 'virtualpowersystem',  # Nome do BD
-        'USER': 'root',  # Usuario do BD
-        'PASSWORD': '112358',  # Senha de acesso ao BD
-        'HOST': 'localhost',  # Host do BD
-        'PORT': '3306',  # Porta do BD
-    }
+    'default': dj_database_url.config()
 }
 
 
@@ -126,6 +122,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'usuarios.CustomUsuario'  # Modelo de usuário customizado
 
-LOGIN_URL = 'login'  # Usar para restringir acesso aos usuario. Usar o decorator
+LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'inicio'
 LOGOUT_REDIRECT_URL = 'inicio'
