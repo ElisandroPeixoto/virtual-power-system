@@ -1,18 +1,18 @@
-/* Input Grande */
+/* --- Input Grande --- */
 
 .input-lg{
     width: 300px;
     height: 20px;
 }
 
-/* Input Médio */
+/* --- Input Médio --- */
 
 .input-md{
     width: 230px;
     height: 20px;
 }
 
-/* Input Pequeno */
+/* --- Input Pequeno --- */
 
 .input-sm{
     width: 80px;

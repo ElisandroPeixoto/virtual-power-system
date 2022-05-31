@@ -1,4 +1,4 @@
-/* Titulo da Página */
+/* --- Titulo da Página --- */
 
 .profile{
     display: block;
@@ -19,7 +19,7 @@
     width: 1170px;
 }
 
-/* Dados do Usuário */
+/* --- Dados do Usuário --- */
 
 .profile-data{
     width: 1170px;
@@ -61,7 +61,7 @@
     margin-right: auto;
 }
 
-/* Registro de Simulações */
+/* --- Registro de Simulações --- */
 
 .simulations{
     display: block;
@@ -86,7 +86,7 @@ th, td {
 }
 
 
-/* Botão Logout */
+/* --- Botão Logout --- */
 
 .button-logout{
     float: right;

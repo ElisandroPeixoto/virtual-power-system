@@ -1,4 +1,4 @@
-/* Logo principal */
+/* --- Logo principal --- */
 
 .logo-light {
     position: absolute;
@@ -6,7 +6,7 @@
     margin-left: 130px;
 }
 
-/* Barra de Navegação */
+/* --- Barra de Navegação --- */
 
 .navbar {
     width: 100%;
@@ -34,7 +34,7 @@
     margin-right: 130px;
 }
 
-/* Efeitos Links */
+/* --- Efeitos Links --- */
 
 header a:link {
     color: rgb(6,32,71);

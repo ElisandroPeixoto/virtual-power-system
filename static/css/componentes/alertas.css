@@ -1,4 +1,4 @@
-/* Alerta Negativo */
+/* --- Alerta Negativo --- */
 
 .alert-n{
     font-size: 16px;
@@ -11,7 +11,7 @@
     margin-right: auto;
 }
 
-/* Alerta Positivo */
+/* --- Alerta Positivo --- */
 
 .alert-p{
     font-size: 16px;

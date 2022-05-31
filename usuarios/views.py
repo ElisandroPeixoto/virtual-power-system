@@ -1,11 +1,11 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
-from .models import CustomUsuario
-from django.contrib.auth.forms import PasswordChangeForm
-from django.contrib.auth import authenticate, update_session_auth_hash
 from django.contrib.auth import login as django_login
 from django.contrib.auth import logout as django_logout
+from django.contrib.auth import authenticate, update_session_auth_hash
+from django.contrib.auth.forms import PasswordChangeForm
 from .forms import AlterarCustomUsuario
+from .models import CustomUsuario
 
 
 def login(request):
@@ -108,11 +108,6 @@ def perfil(request):
         return render(request, 'perfil.html')
 
 
-def logout(request):
-    django_logout(request)
-    return render(request, 'inicio.html')
-
-
 def gerenciar_perfil(request):
     if request.method == "GET":
         return render(request, 'gerenciar_perfil.html')
@@ -122,6 +117,11 @@ def gerenciar_perfil(request):
         if alterar_usuario.is_valid():
             alterar_usuario.save()
             return render(request, 'perfil.html')
+
+
+def logout(request):
+    django_logout(request)
+    return render(request, 'inicio.html')
 
 
 def alterar_senha(request):

@@ -1,3 +1,5 @@
+/* --- Imagem de Fundo --- */
+
 .change-password-background::before {
     content: "";
     top: 100px;
@@ -13,7 +15,7 @@
     z-index: -1;
 }
 
-/* Titulo da Página */
+/* --- Titulo da Página --- */
 
 .change-password-head{
     display: block;
@@ -34,7 +36,7 @@
     width: 1170px;
 }
 
-/* Formulário */
+/* --- Formulário --- */
 
 .change-password-form{
     display: flex;
@@ -47,7 +49,7 @@
     margin-bottom: 20px;
 }
 
-/* Requisitos de Senha */
+/* --- Requisitos de Senha --- */
 
 .change-pwd-require{
     display: block;
@@ -63,7 +65,7 @@
     font-weight: bold;
 }
 
-/* Botão */
+/* --- Botão --- */
 
 .change-password__button {
     display: block;

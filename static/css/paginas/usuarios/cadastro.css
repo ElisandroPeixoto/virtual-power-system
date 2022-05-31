@@ -1,4 +1,4 @@
-/* Imagem Fundo */
+/* --- Imagem Fundo --- */
 
 .signup::before {
     content: "";
@@ -15,7 +15,7 @@
     z-index: -1;
 }
 
-/* Caixa Cadastro */
+/* --- Caixa Cadastro --- */
 
 .signup-box {
     display: block;
@@ -51,7 +51,7 @@
     margin-right: 30px;
 }
 
-/* Entrada de Dados Cadastro */
+/* --- Entrada de Dados Cadastro --- */
 
 .signup-input {
     display: inline-grid;
@@ -76,7 +76,7 @@
     grid-row: 4;
 }
 
-/* Requisitos de Senha */
+/* --- Requisitos de Senha --- */
 
 .signup-pwd-require{
     display: block;
@@ -90,7 +90,7 @@
     font-weight: bold;
 }
 
-/* Botão e Divider */
+/* --- Botão e Divider --- */
 
 .signup-input__button {
     display: block;

@@ -7,3 +7,7 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='inicio.html'), name='inicio'),  # Página Inicial
     path('', include('usuarios.urls'))  # Páginas do app Usuarios
 ]
+
+admin.site.site_header = 'Virtual Power System'
+admin.site.site_title = 'Virtual Power System'
+admin.site.index_title = 'Administração do Sistema'

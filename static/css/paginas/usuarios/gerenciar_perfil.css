@@ -1,3 +1,5 @@
+/* --- Imagem de Fundo --- */
+
 .change-data-background::before {
     content: "";
     top: 100px;
@@ -13,7 +15,7 @@
     z-index: -1;
 }
 
-/* Titulo da Página */
+/* --- Titulo da Página --- */
 
 .change-data-head{
     display: block;
@@ -34,7 +36,7 @@
     width: 1170px;
 }
 
-/* Formulário */
+/* --- Formulário --- */
 
 .change-data-form{
     display: grid;

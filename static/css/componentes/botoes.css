@@ -1,4 +1,4 @@
-/* Botao Grande */
+/* --- Botao Grande --- */
 
 .btn-lg {
     width: 152px;
@@ -26,7 +26,7 @@
     text-decoration: none;
 }
 
-/* Botao Pequeno */
+/* --- Botao Pequeno --- */
 
 .btn-sm {
     width: 107px;

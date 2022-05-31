@@ -1,3 +1,5 @@
+/* --- Titulos Normais --- */
+
 .title-normal {
     font-size: 18px;
     color: rgb(6,32,71);
@@ -10,6 +12,8 @@
     font-weight: normal;
 }
 
+/* --- Titulos Negrito --- */
+
 .title-bold {
     font-size: 18px;
     color: rgb(6,32,71);
@@ -21,6 +25,8 @@
     color: rgb(6,32,71);
     font-weight: bold;
 }
+
+/* --- Titulos Sublinhado --- */
 
 .title-underline {
     font-size: 18px;

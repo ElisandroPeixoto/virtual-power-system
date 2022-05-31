@@ -1,4 +1,4 @@
-/* Imagem Fundo */
+/* --- Imagem Fundo --- */
 
 .login::before {
     content: "";
@@ -15,7 +15,7 @@
     z-index: -1;
 }
 
-/* Caixa Login */
+/* --- Caixa Login --- */
 
 .login-box {
     display: block;
@@ -51,7 +51,7 @@
     margin-right: 30px;
 }
 
-/* Entrada de Dados Login */
+/* --- Entrada de Dados Login --- */
 
 .login-input {
     display: flex;
@@ -84,7 +84,7 @@
     margin-right: 30px;
 }
 
-/* Opção de Inscrição */
+/* --- Opção de Inscrição --- */
 
 .subscribe {
     text-align: center;
