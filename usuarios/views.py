@@ -142,3 +142,8 @@ def alterar_senha(request):
                 'falha_alteracao': True
             }
             return render(request, 'alterar_senha.html', falha_alteracao)
+
+
+@login_required()
+def selecao_simulacao(request):
+    return render(request, 'menu_simu.html')

@@ -17,7 +17,7 @@
         <nav class="navbar">
             <ul class="navbar-list">
                 <li class="navbar-list__item"><a href="{% url 'inicio' %}"> Página Inicial </a></li>
-                <li class="navbar-list__item"><a href="#"> Simulador </a></li>
+                <li class="navbar-list__item"><a href="{% url 'selecao_simulacao' %}"> Simulador </a></li>
                 <li class="navbar-list__item"><a href="#"> Instruções </a></li>
                 {% if user.is_anonymous %}
                     <li class="navbar-list__item"><strong><a href="{% url 'login' %}"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;Login</a></strong></li>

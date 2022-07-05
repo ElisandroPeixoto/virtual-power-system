@@ -2,7 +2,9 @@
 @import 'reset.css';
 @import 'header.css';
 @import 'footer_gr.css';
+@import 'footer_pq.css';
 @import 'inicio.css';
+@import 'menu_simu.css';
 
 /* --- App: usuarios --- */
 @import url('usuarios/login.css');
