@@ -1,0 +1,55 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block title %}Seleção de Simulação{% endblock %}
+
+<body>
+    {% block content %}
+
+    <section class="simu">
+        <div class="simu_type">
+            <p class="title-bold-lg">Geração</p>
+            <div class="simu_type--resource">
+                <p class="title-bold">Recursos</p>
+                <ul class="simu_type--options">
+                    <li>Proteção de Sobreexcitação (24)</li>
+                    <li>Proteção de Perda de Sincronismo (78)</li>
+                    <li>Proteção de Frequência (81)</li>
+                    <li>Unidades de Controle</li>
+                </ul>
+            </div>
+            <button class="simu_selectbtn btn-lg">Selecionar</button>
+        </div>
+
+        <div class="simu_type">
+            <p class="title-bold-lg">Transmissão</p>
+            <div class="simu_type--resource">
+                <p class="title-bold">Recursos</p>
+                <ul class="simu_type--options">
+                    <li>Proteção de Tensão (27 e 59)</li>
+                    <li>Proteção Direcional (67)</li>
+                    <li>Localização de Faltas</li>
+                    <li>Unidades de Controle</li>
+                </ul>
+            </div>
+            <button class="simu_selectbtn btn-lg">Selecionar</button>
+        </div>
+
+        <div class="simu_type">
+            <p class="title-bold-lg">Subestação</p>
+            <div class="simu_type--resource">
+                <p class="title-bold">Recursos</p>
+                <ul class="simu_type--options">
+                    <li>Proteções de Sobrecorrente (50 e 51)</li>
+                    <li>Função de Religamento (79)</li>
+                    <li>Unidades de Controle</li>
+                    <br>
+                </ul>
+            </div>
+            <button class="simu_selectbtn btn-lg">Selecionar</button>
+        </div>
+
+    </section>
+
+    {% endblock %}
+</body>
