@@ -1,10 +1,9 @@
 /* --- Base --- */
-@import 'reset.css';
-@import 'header.css';
-@import 'footer_gr.css';
-@import 'footer_pq.css';
-@import 'inicio.css';
-@import 'menu_simu.css';
+@import url('base/reset.css');
+@import url('base/header.css');
+@import url('base/footer_gr.css');
+@import url('base/footer_pq.css');
+@import url('base/inicio.css');
 
 /* --- App: usuarios --- */
 @import url('usuarios/login.css');
@@ -12,3 +11,7 @@
 @import url('usuarios/perfil.css');
 @import url('usuarios/gerenciar_perfil.css');
 @import url('usuarios/alterar_senha.css');
+
+/* --- App: subestacao --- */
+@import url('subestacao/menu_simu.css');
+@import url('subestacao/subestacao_simu.css');

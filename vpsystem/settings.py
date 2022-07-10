@@ -29,6 +29,7 @@ INSTALLED_APPS = [
 
     # Aplicações
     'usuarios',
+    'subestacao',
 ]
 
 MIDDLEWARE = [

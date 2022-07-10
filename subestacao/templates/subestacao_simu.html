@@ -1,0 +1,115 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block title %}VPSystem - Subestação{% endblock %}
+
+<body>
+    {% block content %}
+    <section class="system">
+
+        {% include 'unifilar.html' %}
+
+        <div class="system__ser">
+            <p class="system__ser--title title-bold">Eventos</p>
+            <table class="system__ser--table">
+                <tr>
+                    <th>Variável</th>
+                    <th>Status</th>
+                    <th>Tempo</th>
+                </tr>
+                <tr>
+                    <td>LT01</td>
+                    <td>Ativada</td>
+                    <td>00:00:00</td>
+                </tr>
+                <tr>
+                    <td>LT01</td>
+                    <td>Desativada</td>
+                    <td>00:00:00</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <div class="divisor div-sm"></div>
+
+    <div class="title-operation title-bold-lg">Unidades de Operação</div>
+
+    <section class="operation">
+        <form class="operation__equip-select">
+            <div>
+                <input type="radio" id="AL-1" name="equipament">
+                <label for="AL-1">AL-1</label>
+            </div>
+            <div>
+                <input type="radio" id="AL-2" name="equipament">
+                <label for="AL-2">AL-2</label>
+            </div>
+            <div>
+                <input type="radio" id="AL-3" name="equipament">
+                <label for="AL-2">AL-3</label>
+            </div>
+            <div>
+                <input type="radio" id="BT-1" name="equipament">
+                <label for="AL-2">BT-1</label>
+            </div>
+            <div>
+                <input type="radio" id="AT-1" name="equipament">
+                <label for="AL-2">AT-1</label>
+            </div>
+            <div>
+                <input type="radio" id="TR-1" name="equipament">
+                <label for="AL-2">TR-1</label>
+            </div>
+            <div>
+                <input type="radio" id="LT-1" name="equipament">
+                <label for="AL-2">LT-1</label>
+            </div>
+            <div>
+                <input type="radio" id="LT-2" name="equipament">
+                <label for="AL-2">LT-2</label>
+            </div>
+        </form>
+
+        <div>
+            <div class="title-bold">AL-1</div>
+            <div class="operation__IHM">
+                <div class="operation__measures">
+                    VA = 0.00 ∠ 0.00 <br>
+                    VB = 0.00 ∠ 0.00 <br>
+                    VC = 0.00 ∠ 0.00 <br>
+                    IA = 0.00 ∠ 0.00 <br>
+                    IB = 0.00 ∠ 0.00 <br>
+                    IC = 0.00 ∠ 0.00 <br>
+                    IN = 0.00 ∠ 0.00 <br>
+                </div>
+
+                <div class="operation__buttons">
+                    <button class="buttons__relay-command"></button>
+                    <div class="buttons__name">BT01</div>
+                    <button class="buttons__relay-command"></button>
+                    <div class="buttons__name">BT02</div>
+                    <button class="buttons__relay-command"></button>
+                    <div class="buttons__name">BT03</div>
+                    <button class="buttons__relay-command"></button>
+                    <div class="buttons__name">BT04</div>
+                </div>
+
+                <div class="operation__leds">
+                    <div class="leds__relay"></div>
+                    <div>LED01</div>
+                    <div class="leds__relay"></div>
+                    <div>LED02</div>
+                    <div class="leds__relay"></div>
+                    <div>LED03</div>
+                    <div class="leds__relay"></div>
+                    <div>LED04</div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    {% endblock %}
+
+</body>
