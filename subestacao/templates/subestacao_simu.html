@@ -36,45 +36,45 @@
     <div class="title-operation title-bold-lg">Unidades de Operação</div>
 
     <section class="operation">
-        <form class="operation__equip-select">
+        <form class="operation__equip-select" method="POST">
             <div>
-                <input type="radio" id="AL-1" name="equipament">
-                <label for="AL-1">AL-1</label>
+                <input type="radio" name="equipament" checked="checked" value="1">
+                <label>AL-1</label>
             </div>
             <div>
-                <input type="radio" id="AL-2" name="equipament">
-                <label for="AL-2">AL-2</label>
+                <input type="radio" name="equipament" value="2">
+                <label>AL-2</label>
             </div>
             <div>
-                <input type="radio" id="AL-3" name="equipament">
-                <label for="AL-2">AL-3</label>
+                <input type="radio" name="equipament" value="3">
+                <label>AL-3</label>
             </div>
             <div>
-                <input type="radio" id="BT-1" name="equipament">
-                <label for="AL-2">BT-1</label>
+                <input type="radio" name="equipament" value="4">
+                <label>BT-1</label>
             </div>
             <div>
-                <input type="radio" id="AT-1" name="equipament">
-                <label for="AL-2">AT-1</label>
+                <input type="radio" name="equipament" value="5">
+                <label>AT-1</label>
             </div>
             <div>
-                <input type="radio" id="TR-1" name="equipament">
-                <label for="AL-2">TR-1</label>
+                <input type="radio" name="equipament" value="6">
+                <label>TR-1</label>
             </div>
             <div>
-                <input type="radio" id="LT-1" name="equipament">
-                <label for="AL-2">LT-1</label>
+                <input type="radio" name="equipament" value="7">
+                <label>LT-1</label>
             </div>
             <div>
-                <input type="radio" id="LT-2" name="equipament">
-                <label for="AL-2">LT-2</label>
+                <input type="radio" name="equipament" value="8">
+                <label>LT-2</label>
             </div>
         </form>
 
-        <div>
+        <div class="box_equipamento" id="equip1">
             <div class="title-bold">AL-1</div>
             <div class="operation__IHM">
-                <div class="operation__measures">
+                <div class="operation__measures" hidden>
                     VA = 0.00 ∠ 0.00 <br>
                     VB = 0.00 ∠ 0.00 <br>
                     VC = 0.00 ∠ 0.00 <br>
@@ -107,7 +107,6 @@
                 </div>
             </div>
         </div>
-
 
     </section>
     {% endblock %}
