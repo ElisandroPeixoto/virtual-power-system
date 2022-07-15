@@ -7,31 +7,13 @@
     {% block content %}
     <section class="system">
 
-        {% include 'unifilar.html' %}
-
-        <div class="system__ser">
-            <p class="system__ser--title title-bold">Eventos</p>
-            <table class="system__ser--table">
-                <tr>
-                    <th>Variável</th>
-                    <th>Status</th>
-                    <th>Tempo</th>
-                </tr>
-                <tr>
-                    <td>LT01</td>
-                    <td>Ativada</td>
-                    <td>00:00:00</td>
-                </tr>
-                <tr>
-                    <td>LT01</td>
-                    <td>Desativada</td>
-                    <td>00:00:00</td>
-                </tr>
-            </table>
+        <div class="system__unifilar">
+          {% include 'unifilar.html' %}
         </div>
+
     </section>
 
-    <div class="divisor div-sm"></div>
+    <div class="divisor div-sm__gray"></div>
 
     <div class="title-operation title-bold-lg">Unidades de Operação</div>
 
@@ -108,7 +90,42 @@
             </div>
         </div>
 
+        <div class="operation-save">
+            <button class="btn-lg"><i class="fa-solid fa-floppy-disk"></i>&nbsp;Salvar</button><br><br>
+            <input class="input-lg" type="text" placeholder="nome da simulação">
+        </div>
+
+        <div class="operation-run">
+            <button class="operation-run__button btn-lg"><i class="fa-solid fa-play"></i>&nbsp;Executar</button><br><br>
+            <div>Tempo de Execução: 00min00s000ms</div>
+        </div>
+
+        <div class="operation__ser">
+            <p class="operation__ser--title title-bold">Eventos</p>
+            <table class="operation__ser--table">
+                <tr>
+                    <th>Equip.</th>
+                    <th>Variável</th>
+                    <th>Status</th>
+                    <th>Tempo</th>
+                </tr>
+                <tr>
+                    <td>AL-1</td>
+                    <td>LT01</td>
+                    <td>Ativada</td>
+                    <td>00:00:00</td>
+                </tr>
+                <tr>
+                    <td>AL-1</td>
+                    <td>LT01</td>
+                    <td>Desativada</td>
+                    <td>00:00:00</td>
+                </tr>
+            </table>
+        </div>
+
     </section>
+
     {% endblock %}
 
 </body>

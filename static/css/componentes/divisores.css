@@ -11,3 +11,9 @@
     height: 0px;
     border: 1px solid rgb(6,32,71);
 }
+
+.div-sm__gray{
+    height: 0px;
+    border: 1px solid rgb(128,128,128);
+    opacity: 0.5;
+}
