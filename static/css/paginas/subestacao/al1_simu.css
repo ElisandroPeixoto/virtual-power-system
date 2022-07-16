@@ -1,0 +1,38 @@
+/* --- Unifilar --- */
+
+.se-startinput {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.se-startinput__unifilar{
+    margin-right: 100px;
+}
+
+.se-startinput__unifilar--status{
+    margin-left: 100px;
+}
+
+.se-startinput__unifilar--status p{
+    font-weight: bold;
+    margin-left: 28px;
+}
+
+.se-startinput__unifilar--status input{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.se-startinput__VI{
+    margin-right: 100px;
+}
+
+.se-startinput__VI th {
+    text-align: center;
+}
+
+.se-startinput__leds th {
+    text-align: center;
+}
