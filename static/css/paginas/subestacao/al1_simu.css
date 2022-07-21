@@ -179,3 +179,112 @@
     padding-top: 15px;
     text-align: center;
 }
+
+/* --- Unidade de Controle --- */
+
+.se-control{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+}
+
+.se-control__title{
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+
+/* -- Variáveis Binárias -- */
+.se-control__varbi{
+    width: 316px;
+    height: 430px;
+    box-shadow: 2px 5px 10px gray;
+}
+
+.se-control__varbi table{
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.se-control__varbi td{
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.se-control__varbi--title{
+    padding-top: 25px;
+    text-align: center;
+}
+
+/* -- Variáveis Analógicas -- */
+.se-control__varana{
+    width: 316px;
+    height: 430px;
+    box-shadow: 2px 5px 10px gray;
+}
+
+.se-control__varana table{
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.se-control__varana td{
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.se-control__varana--title{
+    padding-top: 25px;
+    text-align: center;
+}
+
+/* -- Variáveis Biestáveis -- */
+.se-control__biest{
+    width: 316px;
+    height: 430px;
+    box-shadow: 2px 5px 10px gray;
+}
+
+.se-control__biest table{
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.se-control__biest td{
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.se-control__biest--title{
+    padding-top: 25px;
+    text-align: center;
+}
+
+/* -- Temporizações -- */
+.se-control__timer{
+    width: 200px;
+    height: 430px;
+    box-shadow: 2px 5px 10px gray;
+}
+
+.se-control__timer table{
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.se-control__timer td{
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.se-control__timer--title{
+    padding-top: 25px;
+    text-align: center;
+}
