@@ -1,0 +1,40 @@
+/* --- Entradas: Corrente e Tensão --- */
+
+.se-startinput__VI{
+    margin-right: 100px;
+}
+
+.se-startinput__VI th {
+    text-align: center;
+}
+
+/* --- Entradas: Equações de LED's --- */
+
+.se-startinput__leds{
+    border: 1px solid gray;
+    width: 340px;
+    height: 180px;
+    box-shadow: 2px 5px 10px gray;
+}
+
+.se-startinput__leds--table{
+    margin-top: 6px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.se-startinput__leds th {
+    text-align: left;
+}
+
+.se-startinput__leds td{
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.al1-divisor{
+    width: 95%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}

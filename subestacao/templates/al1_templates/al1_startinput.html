@@ -1,0 +1,90 @@
+{% load static %}
+<body>
+    <div class="se-startinput">
+        <div class="se-startinput__unifilar">
+            <img src="{% static 'img/substation/al1.png' %}">
+            
+            <div class="se-startinput__unifilar--status">
+                <p>Posição Inicial</p>
+                <input type="radio" name="estado-equip" value="0">
+                <label>Aberto</label>
+                <input type="radio" name="estado-equip" value="1">
+                <label>Fechado</label>
+            </div>
+        </div>
+    
+        <div class="se-startinput__VI">
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Módulo</th>
+                    <th>Ângulo</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>IA= </td>
+                    <td><input type="number" class="input-sm"></td>
+                    <td><input type="number" class="input-sm"></td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>IB= </td>
+                    <td><input type="number" class="input-sm"></td>
+                    <td><input type="number" class="input-sm"></td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>IC= </td>
+                    <td><input type="number" class="input-sm"></td>
+                    <td><input type="number" class="input-sm"></td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>VA= </td>
+                    <td><input type="number" class="input-sm"></td>
+                    <td><input type="number" class="input-sm"></td>
+                    <td>V</td>
+                </tr>
+                <tr>
+                    <td>VB= </td>
+                    <td><input type="number" class="input-sm"></td>
+                    <td><input type="number" class="input-sm"></td>
+                    <td>V</td>
+                </tr>
+                <tr>
+                    <td>VC= </td>
+                    <td><input type="number" class="input-sm"></td>
+                    <td><input type="number" class="input-sm"></td>
+                    <td>V</td>
+                </tr>
+            </table>
+        </div>
+    
+        <div class="se-startinput__leds">
+            <table class="se-startinput__leds--table">
+                <tr>
+                    <th></th>
+                    <th>Sinalizações</th>
+                </tr>
+                <tr>
+                    <td>LED01= </td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>LED02= </td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>LED03= </td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>LED04= </td>
+                    <td><input type="text"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <div class="al1-divisor div-sm__gray"></div>
+</body>

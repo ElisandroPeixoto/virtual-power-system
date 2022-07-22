@@ -1,0 +1,113 @@
+/* ----- Unidade de Proteção ----- */
+
+.se-protection{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.se-protection__title{
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+
+/* Relações de Transformação */
+.se-protection__transformer{
+    width: 220px;
+    height: 295px;
+    box-shadow: 2px 5px 10px gray;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.se-protection__transformer table{
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.se-protection__transformer--title{
+    padding-top: 15px;
+    text-align: center;
+}
+
+
+/* Função 50 */
+.se-protection__inst{
+    width: 400px;
+    height: 295px;
+    box-shadow: 2px 5px 10px gray;
+    margin-right: 20px;
+}
+
+.se-protection__inst table{
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.se-protection__inst td{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: left;
+}
+
+.se-protection__inst--title{
+    padding-top: 15px;
+    text-align: center;
+}
+
+
+/* Função 51 */
+.se-protection__temp{
+    width: 400px;
+    height: 295px;
+    box-shadow: 2px 5px 10px gray;
+    margin-right: 20px;
+}
+
+.se-protection__temp table{
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.se-protection__temp td{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: left;
+}
+
+.se-protection__temp--title{
+    padding-top: 15px;
+    text-align: center;
+}
+
+
+/* Função 79 */
+.se-protection__relig{
+    width: 232px;
+    height: 295px;
+    box-shadow: 2px 5px 10px gray;
+    margin-right: 20px;
+}
+
+.se-protection__relig table{
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.se-protection__relig td{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: left;
+}
+
+.se-protection__relig--title{
+    padding-top: 15px;
+    text-align: center;
+}
