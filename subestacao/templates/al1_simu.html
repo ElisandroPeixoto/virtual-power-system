@@ -5,14 +5,16 @@
 
 <body>
     {% block content %}
-    
-    {% include 'al1_templates/al1_startinput.html' %}
-    {% include 'al1_templates/al1_protecao.html' %}
-    {% include 'al1_templates/al1_controle.html' %}
-    
+    <form id="form-protection" action="{% url 'al1' %}" method="POST">
+        {% csrf_token %}
+        {% include 'al1_templates/al1_startinput.html' %}
+        {% include 'al1_templates/al1_protecao.html' %}
+        {% include 'al1_templates/al1_controle.html' %}
+    </form>
+
     <div class="se-buttons">
-        <button class="btn-lg"><i class="fa-solid fa-check"></i>&nbsp;Concluído</button>
-        <button class="btn-lg"><i class="fa-solid fa-rotate-left"></i>&nbsp;Voltar</button>
+        <button class="btn-lg" form="form-protection" type="submit"><i class="fa-solid fa-check"></i>&nbsp;Concluído</button>
+        <a class="btn-lg__link" href="{% url 'subestacao_simulacao' %}"><button class="btn-lg"><i class="fa-solid fa-rotate-left"></i>&nbsp;Voltar</button></a>
     </div>
 
     {% endblock %}
