@@ -1,30 +1,27 @@
-import cmath, math
+import cmath
 import numpy as np
 
 
-ia_mag = 86.60
-ia_ang = -50j
-
-ib_mag = -86.60
-ib_ang = -50j
-
-ic_mag = 0
-ic_ang = 100j
+def retangular(vi_fasepolar):
+    """Converte um complexo polar para retangular"""
+    valor_rect = cmath.rect(vi_fasepolar[0], np.deg2rad(vi_fasepolar[1]))
+    return valor_rect
 
 
-ia = ia_mag + ia_ang
-ib = ib_mag + ib_ang
-ic = ic_mag + ic_ang
+def polar(vi_faserect):
+    """Converte um complexo em retangular para polar"""
+    valor_polar_rad = cmath.polar(vi_faserect)
+    valor_polar_deg = round(valor_polar_rad[0], 2), round((np.rad2deg(valor_polar_rad[1])), 2)
+    return valor_polar_deg
 
 
-def corrente_neutro(i_fasea, i_faseb, i_fasec):
-    ig = i_fasea + i_faseb + i_fasec
-    return ig
+def calculo_neutro(ifasea, ifaseb, ifasec):
+    """Calcula a corrente de neutro de um sistema trifásico Y"""
+    iarec = retangular(ifasea)
+    ibrec = retangular(ifaseb)
+    icrec = retangular(ifasec)
 
+    igrec = iarec + ibrec + icrec
 
-neutro = corrente_neutro(ia, ib, ic)
-
-print(neutro)
-print(cmath.polar(neutro))
-
-""" ARQUIVO EM CONSTRUÇÃO """
+    igpol = polar(igrec)
+    return igpol
