@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 
@@ -31,6 +31,18 @@ def al1(request):
         fasec_ang = int(request.POST.get('ic_angulo'))
         ifasec = (fasec_mag, fasec_ang)
 
+        # Neutro
         ig = calculo_neutro(ifasea, ifaseb, ifasec)
 
-        return HttpResponse(f'{ig[0]} ∠ {ig[1]}')
+        correntes = {
+            'mag_fasea': fasea_mag,
+            'ang_fasea': fasea_ang,
+            'mag_faseb': faseb_mag,
+            'ang_faseb': faseb_ang,
+            'mag_fasec': fasec_mag,
+            'ang_fasec': fasec_ang,
+            'mag_neutro': ig[0],
+            'ang_neutro': ig[1]
+        }
+
+        return render(request, 'subestacao_simu.html', correntes)
