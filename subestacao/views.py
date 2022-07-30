@@ -7,7 +7,18 @@ from .calculo_medidas import calculo_neutro
 
 @login_required
 def subestacao_simulacao(request):
-    return render(request, 'subestacao_simu.html')
+    if request.method == "GET":
+        correntes = {
+            'mag_fasea': 0.00,
+            'ang_fasea': 0.00,
+            'mag_faseb': 0.00,
+            'ang_faseb': 0.00,
+            'mag_fasec': 0.00,
+            'ang_fasec': 0.00,
+            'mag_neutro': 0.00,
+            'ang_neutro': 0.00
+        }
+    return render(request, 'subestacao_simu.html', correntes)
 
 
 @login_required

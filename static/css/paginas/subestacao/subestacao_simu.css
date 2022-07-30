@@ -62,10 +62,10 @@
 .operation__measures{
     display: block;
     margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 20px;
     width: 140px;
     height: 160px;
-    text-align: center;
+    text-align: left;
     padding-top: 20px;
 }
 
