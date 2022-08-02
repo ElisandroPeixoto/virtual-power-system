@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from .equipamentos import Disjuntor
 from django.http import HttpResponse
 
 from .calculo_medidas import calculo_neutro
@@ -42,18 +43,17 @@ def al1(request):
         fasec_ang = int(request.POST.get('ic_angulo'))
         ifasec = (fasec_mag, fasec_ang)
 
-        # Neutro
-        ig = calculo_neutro(ifasea, ifaseb, ifasec)
+        al_1 = Disjuntor(0, 0, 0, ifasea, ifaseb, ifasec)
 
         correntes = {
-            'mag_fasea': fasea_mag,
-            'ang_fasea': fasea_ang,
-            'mag_faseb': faseb_mag,
-            'ang_faseb': faseb_ang,
-            'mag_fasec': fasec_mag,
-            'ang_fasec': fasec_ang,
-            'mag_neutro': ig[0],
-            'ang_neutro': ig[1]
+            'mag_fasea': al_1.correntes[0][0],
+            'ang_fasea': al_1.correntes[0][1],
+            'mag_faseb': al_1.correntes[1][0],
+            'ang_faseb': al_1.correntes[1][1],
+            'mag_fasec': al_1.correntes[2][0],
+            'ang_fasec': al_1.correntes[2][1],
+            'mag_neutro': al_1.neutro()[0],
+            'ang_neutro': al_1.neutro()[1],
         }
 
         return render(request, 'subestacao_simu.html', correntes)
