@@ -1,9 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from .equipamentos import Disjuntor
-from django.http import HttpResponse
 
-from .calculo_medidas import calculo_neutro
+from django.http import HttpResponse
 
 
 @login_required
@@ -19,14 +18,22 @@ def subestacao_simulacao(request):
             'mag_neutro': 0.00,
             'ang_neutro': 0.00
         }
-    return render(request, 'subestacao_simu.html', correntes)
+        return render(request, 'subestacao_simu.html', correntes)
+    else:
+        al_1 = request.session['al_1']
+
+        envios = {
+            'al1_rele_50f': al_1
+        }
+        return render(request, 'subestacao_simu.html', envios)
 
 
 @login_required
 def al1(request):
     if request.method == "GET":
         return render(request, 'al1_simu.html')
-    else:
+    else:  # POST
+
         # *** Correntes ***
         # Fase A
         fasea_mag = int(request.POST.get('ia_magnitude'))
@@ -44,6 +51,13 @@ def al1(request):
         ifasec = (fasec_mag, fasec_ang)
 
         al_1 = Disjuntor(0, 0, 0, ifasea, ifaseb, ifasec)
+        # *** ***
+
+        pickup_50f = int(request.POST.get('prot50pp'))  # Relé 50 Fase
+        al_1.rele_50f(pickup_50f)
+
+        # Passando o objeto "AL-1" para outras views
+        request.session['al_1'] = al_1.rele_50f(pickup_50f)
 
         correntes = {
             'mag_fasea': al_1.correntes[0][0],

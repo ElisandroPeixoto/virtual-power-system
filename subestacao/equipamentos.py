@@ -1,4 +1,4 @@
-from calculo_medidas import calculo_neutro
+from .calculo_medidas import calculo_neutro
 
 
 class Equipamento:
@@ -30,5 +30,8 @@ class Disjuntor(Equipamento):
 
         self.__status = False
 
-    def rele_50f(self, pickup_50):
-        pass
+    def rele_50f(self, pickup_50):  # >>> FALTA CORRIGIR ESSA LÓGICA DO RELÉ <<<
+        if (self.correntes[0][0] or self.correntes[1][0] or self.correntes[2][0]) > pickup_50:
+            return 'Atuação 50 Fase'
+        else:
+            return 'Tudo Normal'

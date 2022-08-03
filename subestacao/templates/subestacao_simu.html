@@ -7,9 +7,13 @@
     {% block content %}
     <section class="system">
 
-        <div class="system__unifilar">
-          {% include 'unifilar.html' %}
-        </div>
+        <form id="run_simu" action="{% url 'subestacao_simulacao' %}" method="POST">
+            {% csrf_token %}
+           <div class="system__unifilar">
+               {% include 'unifilar.html' %}
+           </div>
+        </form>
+
 
     </section>
 
@@ -68,7 +72,7 @@
         </div>
 
         <div class="operation-run">
-            <button class="operation-run__button btn-lg"><i class="fa-solid fa-play"></i>&nbsp;Executar</button><br><br>
+            <button class="operation-run__button btn-lg" form="run_simu" type="submit"><i class="fa-solid fa-play"></i>&nbsp;Executar</button><br><br>
             <div>Tempo de Execução: 00min00s000ms</div>
         </div>
 
@@ -90,7 +94,7 @@
                 <tr>
                     <td>AL-1</td>
                     <td>LT01</td>
-                    <td>{{ rele_50f }}</td>
+                    <td>{{ al1_rele_50f }}</td>
                     <td>00:00:00</td>
                 </tr>
             </table>
